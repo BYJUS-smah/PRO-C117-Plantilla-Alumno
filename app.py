@@ -1,32 +1,32 @@
-# import the necessary modules
+# Importar los módulos necesarios.
 from flask import Flask , render_template , request , jsonify
 
-# importing sentiment_analysis file as sa
+# Importar el archivo de análisis de sentimiento sentiment_analysis como sa
 import sentiment_analysis as sa
 
 app = Flask(__name__)
 
-# app route for index page
+# Ruta de la app para la página index.
 @app.route('/')
 def home():
     return render_template('index.html')
 
-# write a route for post request
+# Escribir una ruta para el requerimiento POST.
 @app.route('' , methods = [''])
 def review():
 
-    # extract the customer_review by writing the appropriate 'key' from the JSON data
+    # Extraer la reseña del cliente (customer_review) escribiendo la 'clave' apropiada de los datos JSON.
     review = request.json.get('')
 
-    # check if the customer_review is empty, return error
+    # Comprobar si customer_review está vacía, devolver el error.
     if not review:
 
         return jsonify({'status' : 'error' , 
-                        'message' : 'Empty response'})
+                        'message' : 'Reseña vacía'})
 
-    # if review is not empty, pass it through the 'predict' function.
-    # predict function returns 2 things : sentiment and path of image in static folder
-    # example : Positive , ./static/assets/emoticons/positive.png
+    # Si la reseña no está vacía, pasarla por la función 'predict' - (predecir).
+    # La función predict devuelve 2 cosas: la emoción y la ruta de la imagen en la carpeta static.
+    # Ejemplo: Positivo , ./static/assets/emoticons/positive.png
 
     else:
 

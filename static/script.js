@@ -1,52 +1,52 @@
 $(document).ready(function(){
 
-    console.log('Ready')
+    console.log('Listo')
 
-    //  Fetch the current date and update it in the DOM
-
-
+    //  Obtén la fecha actual y actualízala en el DOM.
 
 
-    //  write an event, when Submit button is clicked
+
+
+    //  Escribe un evento, cuando se hace clic en el botón eviar.
     $('').click(function(){
 
-        //  get the text value from the textarea using the 'val()' method
+        //  Obtén el valor del texto, del área de texto, con el método 'val()'.
         let text_value = $('').val()
 
-        //  Convert it to JS object.
-        //  Provide a 'key' here and in write the same in app.py file as well to extract data
+        //  Conviértelo en un objeto JS.
+        //  Proporciona una 'clave' aquí y en escribe lo mismo en el archivo app.py; también para extraer los datos.
         let input_text = {'' : text_value}
         console.log(input_text)
 
-        //  ajax request
+        //  Requerimiento AJAX.
         $.ajax({
 
-            //  type of web request
+            //  Tipo de requerimiento web.
             type : '',
 
-            //  Data to be sent in JSON format
+            //  Datos a ser enviados en formato JSON.
             data : JSON.stringify(),
 
-            //  type of response expected is json
+            //  Tipo de respuesta esperada en JSON.
             dataType : 'json',
 
-            //  contentType
+            //  contentType - (tipo de contenido).
             contentType : 'application/json',
 
-            //  if everything is successful, run this function
+            //  Si todo es exitoso, ejecuta esta función.
             success : function(result){
 
-                // extract prediction and emoticon url from result
+                // Extrae la predicción y la URL del emoticón del resultado.
 
 
-                //  update the DOM elements
+                //  Actualiza los elementos del DOM.
 
 
-                //  show them
+                //  Muestra los elementos.
 
             },
 
-            //  if any error, run this function
+            //  Si hay algún error, ejecuta esta función.
             error : function(result){
 
                 console.log(result)
@@ -54,7 +54,7 @@ $(document).ready(function(){
         })
 
 
-        //  clearing the textbox after every button push
+        //  Borra el cuadro de texto después de cada clic en el botón.
         $('#text').val("")
     })
         

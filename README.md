@@ -1,5 +1,5 @@
-# PRO-C117-Student-Boilerplate
-To complete this Project, make sure you have :
-1) Downloaded all the files from this Repository
-2) Created a virtual environment
-3) Installed the necessary libraries like flask , pandas , Tensorflow
+# PRO-C117-Plantilla-Alumno
+Para completar este proyecto, asegúrate de que has:
+1) Descargado todos los archivos de este repositorio.
+2) Creado un entorno virtual.
+3) Instalado las librerías necesarias como Flask, Pandas, Tensorflow
